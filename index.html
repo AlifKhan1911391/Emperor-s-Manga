@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emperor's Manga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/IMG_20250507_085248_977.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        
+        html {
+    scroll-behavior: smooth;
+}
+        body {
+        	
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Navigation */
+        
+/* Navigation - Always Visible Sticky Version */
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+}
+
+/* Keep the rest of your nav styles exactly as they are */
+#nav ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav li {
+    float: left;
+}
+
+#nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav li a:hover {
+    background-color: #111;
+}
+
+.activenav {
+    background-color: #4169E1;
+    color: white;
+}
+
+.activenav:hover {
+    background-color: #00008B;
+}
+
+        
+        /* Premium Section */
+        .premium-section {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .premium-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .premium-heading {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        .premium-list {
+            list-style: none;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .premium-list li {
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        /* Header */
+        #pagename {
+        	margin-top: 60px;
+            margin-bottom: 5px;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 35px;
+            color: #5DADE2;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        #pagename img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        
+        #welcome {
+            font-family: 'Tagesschrift', sans-serif;
+            background: linear-gradient(to bottom, #fff0f5, #e0f7fa);
+            color: #222;
+            text-align: center;
+            padding: 24px 16px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 12px;
+            font-size: 1.0rem;
+            line-height: 1.4;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Main Content */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .manga {
+            width: 50%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            margin: 15px 0;
+        }
+        
+        .name {
+            margin-bottom: 5px;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 35px;
+            color: #191970;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        a:hover .name {
+            color: #005ce6; 
+        }
+        
+        em {
+            display: block;
+            color: #0066cc;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        
+        .description {
+            margin-bottom: 90px;
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        /* Responsive Adjustments */
+@media (min-width: 430px) {
+    /* Navigation */
+    #nav li a {
+        padding: 16px 24px;
+        font-size: 1.05rem;
+    }
+
+    /* Header */
+    
+    
+    #pagename {
+        font-size: 36px;
+        gap: 18px;
+        margin-top: 60px;
+    }
+
+    #pagename img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #welcome {
+        padding: 24px;
+        font-size: 1.05rem;
+        max-width: 85%;
+        margin: 25px auto;
+    }
+
+    /* Premium Section - Now More Compact */
+    .premium-section {
+        padding: 50px 25px;
+    }
+
+    .premium-container {
+        max-width: 750px;
+    }
+
+    .premium-heading {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .premium-list {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 15px;
+    }
+
+    .premium-list li {
+        margin-bottom: 10px;
+        padding-left: 1.8rem;
+        text-indent: -1.8rem;
+    }
+
+    .premium-list li::before {
+        content: "•";
+        color: #4169E1;
+        font-weight: bold;
+        display: inline-block;
+        width: 1.8rem;
+    }
+
+    /* Manga Content */
+    .manga {
+        width: 55%;
+        max-width: 450px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    em {
+        font-size: 1.05rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        max-width: 650px;
+        margin: 0 auto 80px;
+        padding: 0 20px;
+    }
+}
+
+/* Landscape Orientation Tweaks */
+@media (min-width: 430px) and (orientation: landscape) {
+    #welcome {
+        max-width: 75%;
+        padding: 20px;
+    }
+
+    .manga {
+        width: 45%;
+    }
+
+    .premium-section {
+        padding: 40px 20px;
+    }
+
+    .premium-list li {
+        margin-bottom: 8px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ol>
+            <li><a href="#" class="activenav">Products</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="https://www.facebook.com/share/12LCAYsnfsL/">FB Page</a></li>
+            <li><a href="review.html">Reviews</a></li>
+        </ol>
+    </div>
+    
+    <div>
+        <p id="pagename">
+            <img src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/IMG_20250507_085248_977.jpg" alt="Emperor's Manga Logo">
+            Emperor's Manga
+        </p>
+        <div id="welcome">
+            <h1>Welcome to Emperor's Manga – Where Every Page Sparks Adventure!</h1>
+            <p>Find your favorite stories, epic battles, and heart-melting moments—all in one place. Let's dive into a world of ink and imagination!</p>
+        </div>
+    </div>
+    
+    <section class="premium-section">
+        <div class="premium-container">
+            <h2 class="premium-heading">
+                Premium Manga. Honest Price. No Compromise.
+            </h2>
+            <ul class="premium-list">
+                <li><strong>✔️ Top-Grade Paper Quality</strong> – Durable, smooth, and made for long reading sessions without creasing or tearing.</li>
+                <li><strong>✔️ High-Definition Printing</strong> – Every panel is sharp, detailed, and visually immersive — just as the artist intended.</li>
+                <li><strong>✔️ Comfortable on the Eyes</strong> – Unlike screen time fatigue, our paper offers a relaxed, effortless reading experience.</li>
+                <li><strong>✔️ Matte Finish Cover</strong> – Clean, elegant, and fingerprint-resistant. Looks premium, feels premium.</li>
+                <li><strong>✔️ Affordable Without Compromise</strong> – Enjoy premium features without breaking the bank.</li>
+                <li><strong>✔️ Regular Discounts & Bundles</strong> – Save more with curated sets and limited-time offers.</li>
+                <li><strong>✔️ Fast & Reliable Delivery</strong> – Nationwide shipping that gets your manga to you, safely and on time.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="container">
+        <img class="manga" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Images/FB_IMG_1746586778329.jpg" alt="Undead Unluck">
+        <a href="https://www.facebook.com/share/p/1AdMWPWYnQ/">
+            <p class="name">Undead Unluck (All vols)</p>
+        </a>
+        <em>Price: $106 per vol.</em>
+        <p class="description">
+            "Undead Unluck" is a manga by Yoshifumi Tozuka about Fuuko Izumo, a girl cursed with "unluck" that causes misfortune to those she touches, and Andy, an undead being who desires to die. Together, they fight a secret organization that wants to eliminate those with special abilities, while navigating the complexities of Fuuko's power and Andy's immortality.
+            <br><br>
+            How thrilling, huh? Now get each volume on our page. Buy now!
+        </p>
+        
+        <img class="manga" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Images/FB_IMG_1746586725350.jpg" alt="Sakomoto Days">
+        <a href="https://www.facebook.com/61566811864616/posts/pfbid02DeaKj2bBH4FUyZEcZAUjtwE4w31cWrFeuXgewjRj2KLLaByb5rPcQjjbxSYejEtal/?app=fbl">
+            <p class="name">Sakomoto Days (Vol. 1 - 12)</p>
+        </a>
+        <em>Price: $69 per vol.</em>
+        <p class="description">
+            Taro Sakamoto was the ultimate assassin, feared by villains and admired by hitmen. But one day...he fell in love! Retirement, marriage, fatherhood and then... Sakamoto gained weight! The chubby guy who runs the neighborhood store is actually a former legendary hitman! Can he protect his family from danger? Get ready to experience a new kind of action comedy series!
+            <br><br>
+            How thrilling, huh? Now get each volume on our page. Buy now!
+        </p>
+    </div>
+    <script>
+let lastScroll = 0;
+const nav = document.getElementById('nav');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        // Scrolling down and past 100px
+        nav.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up
+        nav.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
+});
+</script>
+</body>
+</html>
