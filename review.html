@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emperor's Manga</title>
     <link rel="icon" href="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/IMG_20250507_085248_977.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-            html {
+        html {
             scroll-behavior: smooth;
         }
         
@@ -19,8 +20,16 @@
             min-height: 100vh;
             background-color: #f5f5f5;
         }
-                .manga {
-            width: 70%;
+        
+        .review-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        
+        .review {
+            width: 60%;
             height: auto;
             border-radius: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -28,12 +37,11 @@
             transition: transform 0.3s ease;
         }
         
-        .manga:hover {
+        .review:hover {
             transform: scale(1.02);
         }	
     
-    
-    #nav {
+        #nav {
             position: fixed;
             top: 0;
             width: 100%;
@@ -75,27 +83,122 @@
         .activenav:hover {
             background-color: #00008B;
         }
+        
+        .reviews-heading {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 80px 0 30px 0;
+            position: relative;
+            color: #333;
+        }
+        
+        .reviews-heading h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            padding: 0 20px;
+        }
+        
+        .reviews-heading::before,
+        .reviews-heading::after {
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .reviews-heading::before {
+            left: 10%;
+        }
+        
+        .reviews-heading::after {
+            right: 10%;
+        }
+        
+        .reviews-heading p {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 500;
+            margin-top: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .reviews-heading p::after {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @media (max-width: 768px) {
+            .reviews-heading h1 {
+                font-size: 2rem;
+            }
+            
+            .reviews-heading::before,
+            .reviews-heading::after {
+                width: 30px;
+            }
+            
+            .review {
+                width: 90%;
+            }
+        }
     </style>
-    <body>
-    	
+</head>
+<body>
     <div id="nav">
         <ol>
             <li><a href="index.html">Products</a></li>
-            <li><a href="order.html" >Order</a></li>
+            <li><a href="order.html">Order</a></li>
             <li><a href="https://www.facebook.com/share/12LCAYsnfsL/">FB Page</a></li>
             <li><a href="" class="activenav">Reviews</a></li>
         </ol>
     </div>
     
+    <div class="reviews-heading">
+        <h1>Customer Reviews</h1>
+        <p>See what our customers are saying about us</p>
+    </div>   
     
+    <div class="review-container">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195714.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195717.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195720.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195723.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195726.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195729.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195735.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195737.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195740.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195743.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195753.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195757.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195809.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195811.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195815.jpg" title="Review" alt="Image loading failed">
+<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195818.jpg" title="Review" alt="Image loading failed">
+    </div>
     
-    
-    
-    
-    
-    
-    
-       <script>
+    <script>
         let lastScroll = 0;
         const nav = document.getElementById('nav');
         
@@ -113,5 +216,5 @@
             lastScroll = currentScroll;
         });
     </script> 
-    	</body>
-    </html>
+</body>
+</html>
