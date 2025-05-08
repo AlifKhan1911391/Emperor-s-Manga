@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emperor's Manga</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/IMG_20250507_085248_977.jpg" type="image/jpeg">
+    <style>
+            html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+                .manga {
+            width: 70%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .manga:hover {
+            transform: scale(1.02);
+        }	
+    
+    
+    #nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        #nav ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        #nav li {
+            float: left;
+        }
+        
+        #nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        #nav li a:hover {
+            background-color: #111;
+        }
+        
+        .activenav {
+            background-color: #4169E1;
+            color: white;
+        }
+        
+        .activenav:hover {
+            background-color: #00008B;
+        }
+    </style>
+    <body>
+    	
+    <div id="nav">
+        <ol>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="order.html" >Order</a></li>
+            <li><a href="https://www.facebook.com/share/12LCAYsnfsL/">FB Page</a></li>
+            <li><a href="" class="activenav">Reviews</a></li>
+        </ol>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       <script>
+        let lastScroll = 0;
+        const nav = document.getElementById('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down and past 100px
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                nav.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script> 
+    	</body>
+    </html>
