@@ -15,66 +15,92 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Base Styles */
-        
         html {
-    scroll-behavior: smooth;
-}
+            scroll-behavior: smooth;
+        }
+        
         body {
-        	
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-color: #f5f5f5;
         }
         
         /* Navigation */
+        #nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            transform: translateY(0);
+        }
         
-/* Navigation - Always Visible Sticky Version */
-#nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1000;
-    transition: transform 0.3s ease;
-    transform: translateY(0);
-}
-
-/* Keep the rest of your nav styles exactly as they are */
-#nav ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#nav li {
-    float: left;
-}
-
-#nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#nav li a:hover {
-    background-color: #111;
-}
-
-.activenav {
-    background-color: #4169E1;
-    color: white;
-}
-
-.activenav:hover {
-    background-color: #00008B;
-}
-
+        #nav ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        #nav li {
+            float: left;
+        }
+        
+        #nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        #nav li a:hover {
+            background-color: #111;
+        }
+        
+        .activenav {
+            background-color: #4169E1;
+            color: white;
+        }
+        
+        .activenav:hover {
+            background-color: #00008B;
+        }
+        
+        /* Welcome Section */
+        #welcome {
+            font-family: 'Tagesschrift', sans-serif;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 30px 0 20px 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            width: 100%;
+            box-sizing: border-box;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Screenshot_20250508-091419.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        #welcome h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+        
+        #welcome p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
         
         /* Premium Section */
         .premium-section {
@@ -82,12 +108,12 @@
             padding: 60px 20px;
             font-family: 'Poppins', sans-serif;
         }
-
+        
         .premium-container {
             max-width: 900px;
             margin: 0 auto;
         }
-
+        
         .premium-heading {
             font-size: 32px;
             font-weight: 600;
@@ -95,22 +121,22 @@
             color: #1a1a1a;
             text-align: center;
         }
-
+        
         .premium-list {
             list-style: none;
             padding: 0;
             color: #333;
             line-height: 1.8;
         }
-
+        
         .premium-list li {
             margin-bottom: 12px;
             font-weight: 400;
         }
-
+        
         /* Header */
         #pagename {
-        	margin-top: 60px;
+            margin-top: 60px;
             margin-bottom: 5px;
             font-family: "Cal Sans", sans-serif;
             font-weight: 400;
@@ -130,21 +156,6 @@
             object-fit: cover;
         }
         
-        #welcome {
-            font-family: 'Tagesschrift', sans-serif;
-            background: linear-gradient(to bottom, #fff0f5, #e0f7fa);
-            color: #222;
-            text-align: center;
-            padding: 24px 16px;
-            border-radius: 12px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px 12px;
-            font-size: 1.0rem;
-            line-height: 1.4;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        
         /* Main Content */
         .container {
             flex: 1;
@@ -162,6 +173,11 @@
             border-radius: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
             margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .manga:hover {
+            transform: scale(1.02);
         }
         
         .name {
@@ -171,6 +187,7 @@
             font-style: normal;
             font-size: 35px;
             color: #191970;
+            transition: color 0.3s ease;
         }
         
         a {
@@ -186,6 +203,7 @@
             color: #0066cc;
             font-style: italic;
             margin: 10px 0;
+            font-size: 1.1rem;
         }
         
         .description {
@@ -195,112 +213,75 @@
             font-weight: 500;
             font-style: normal;
             line-height: 1.6;
+            max-width: 800px;
+            text-align: center;
         }
-
+        
         /* Responsive Adjustments */
-@media (min-width: 430px) {
-    /* Navigation */
-    #nav li a {
-        padding: 16px 24px;
-        font-size: 1.05rem;
-    }
-
-    /* Header */
-    
-    
-    #pagename {
-        font-size: 36px;
-        gap: 18px;
-        margin-top: 60px;
-    }
-
-    #pagename img {
-        width: 80px;
-        height: 80px;
-    }
-
-    #welcome {
-        padding: 24px;
-        font-size: 1.05rem;
-        max-width: 85%;
-        margin: 25px auto;
-    }
-
-    /* Premium Section - Now More Compact */
-    .premium-section {
-        padding: 50px 25px;
-    }
-
-    .premium-container {
-        max-width: 750px;
-    }
-
-    .premium-heading {
-        font-size: 28px;
-        margin-bottom: 25px;
-    }
-
-    .premium-list {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        padding: 0 15px;
-    }
-
-    .premium-list li {
-        margin-bottom: 10px;
-        padding-left: 1.8rem;
-        text-indent: -1.8rem;
-    }
-
-    .premium-list li::before {
-        content: "•";
-        color: #4169E1;
-        font-weight: bold;
-        display: inline-block;
-        width: 1.8rem;
-    }
-
-    /* Manga Content */
-    .manga {
-        width: 55%;
-        max-width: 450px;
-    }
-
-    .name {
-        font-size: 32px;
-    }
-
-    em {
-        font-size: 1.05rem;
-    }
-
-    .description {
-        font-size: 1rem;
-        max-width: 650px;
-        margin: 0 auto 80px;
-        padding: 0 20px;
-    }
-}
-
-/* Landscape Orientation Tweaks */
-@media (min-width: 430px) and (orientation: landscape) {
-    #welcome {
-        max-width: 75%;
-        padding: 20px;
-    }
-
-    .manga {
-        width: 45%;
-    }
-
-    .premium-section {
-        padding: 40px 20px;
-    }
-
-    .premium-list li {
-        margin-bottom: 8px;
-    }
-}
+        @media (min-width: 768px) {
+            /* Navigation */
+            #nav li a {
+                padding: 16px 24px;
+                font-size: 1.05rem;
+            }
+            
+            /* Welcome Section */
+            #welcome {
+                padding: 80px 40px;
+                margin: 60px 0 30px 0;
+            }
+            
+            #welcome h1 {
+                font-size: 2.5rem;
+            }
+            
+            #welcome p {
+                font-size: 1.2rem;
+            }
+            
+            /* Premium Section */
+            .premium-section {
+                padding: 80px 40px;
+            }
+            
+            .premium-heading {
+                font-size: 36px;
+            }
+            
+            .premium-list {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+            
+            /* Manga Content */
+            .manga {
+                width: 45%;
+                max-width: 450px;
+            }
+            
+            .description {
+                font-size: 1.1rem;
+                padding: 0 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            #welcome {
+                padding: 100px 60px;
+            }
+            
+            #welcome h1 {
+                font-size: 3rem;
+            }
+            
+            .premium-section {
+                padding: 100px 60px;
+            }
+            
+            .manga {
+                width: 40%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -365,22 +346,22 @@
         </p>
     </div>
     <script>
-let lastScroll = 0;
-const nav = document.getElementById('nav');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scrolling down and past 100px
-        nav.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up
-        nav.style.transform = 'translateY(0)';
-    }
-    
-    lastScroll = currentScroll;
-});
-</script>
+        let lastScroll = 0;
+        const nav = document.getElementById('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down and past 100px
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                nav.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 </html>
