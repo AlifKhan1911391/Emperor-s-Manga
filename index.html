@@ -18,7 +18,7 @@
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -28,7 +28,7 @@
             min-height: 100vh;
             background-color: #f5f5f5;
         }
-        
+
         /* Navigation */
         #nav {
             position: fixed;
@@ -39,40 +39,40 @@
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
-        
+
         #nav ol {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
-        
+
         #nav li {
             float: left;
         }
-        
+
         #nav li a {
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 13px 11px;
             text-decoration: none;
             transition: background-color 0.3s;
         }
-        
+
         #nav li a:hover {
             background-color: #111;
         }
-        
+
         .activenav {
             background-color: #4169E1;
             color: white;
         }
-        
+
         .activenav:hover {
             background-color: #00008B;
         }
-        
+
         /* Welcome Section */
         #welcome {
             font-family: 'Tagesschrift', sans-serif;
@@ -89,31 +89,31 @@
             background-size: cover;
             position: relative;
         }
-        
+
         #welcome h1 {
             font-size: 2rem;
             margin-bottom: 15px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
-        
+
         #welcome p {
             max-width: 800px;
             margin: 0 auto;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         }
-        
+
         /* Premium Section */
         .premium-section {
             background-color: #f9f9f9;
             padding: 60px 20px;
             font-family: 'Poppins', sans-serif;
         }
-        
+
         .premium-container {
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .premium-heading {
             font-size: 32px;
             font-weight: 600;
@@ -121,19 +121,19 @@
             color: #1a1a1a;
             text-align: center;
         }
-        
+
         .premium-list {
             list-style: none;
             padding: 0;
             color: #333;
             line-height: 1.8;
         }
-        
+
         .premium-list li {
             margin-bottom: 12px;
             font-weight: 400;
         }
-        
+
         /* Header */
         #pagename {
             margin-top: 60px;
@@ -148,14 +148,14 @@
             justify-content: center;
             gap: 15px;
         }
-        
+
         #pagename img {
             border-radius: 50%;
             width: 80px;
             height: 80px;
             object-fit: cover;
         }
-        
+
         /* Main Content */
         .container {
             flex: 1;
@@ -166,7 +166,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        
+
         .manga {
             width: 50%;
             height: auto;
@@ -175,11 +175,11 @@
             margin: 15px 0;
             transition: transform 0.3s ease;
         }
-        
+
         .manga:hover {
             transform: scale(1.02);
         }
-        
+
         .name {
             margin-bottom: 5px;
             font-family: "Cal Sans", sans-serif;
@@ -189,15 +189,15 @@
             color: #191970;
             transition: color 0.3s ease;
         }
-        
+
         a {
             text-decoration: none;
         }
-        
+
         a:hover .name {
             color: #005ce6; 
         }
-        
+
         em {
             display: block;
             color: #0066cc;
@@ -205,7 +205,7 @@
             margin: 10px 0;
             font-size: 1.1rem;
         }
-        
+
         .description {
             margin-bottom: 90px;
             font-family: "Exo 2", sans-serif;
@@ -216,7 +216,7 @@
             max-width: 800px;
             text-align: center;
         }
-        
+
         /* Responsive Adjustments */
         @media (min-width: 768px) {
             /* Navigation */
@@ -224,60 +224,60 @@
                 padding: 16px 24px;
                 font-size: 1.05rem;
             }
-            
+
             /* Welcome Section */
             #welcome {
                 padding: 80px 40px;
                 margin: 60px 0 30px 0;
             }
-            
+
             #welcome h1 {
                 font-size: 2.5rem;
             }
-            
+
             #welcome p {
                 font-size: 1.2rem;
             }
-            
+
             /* Premium Section */
             .premium-section {
                 padding: 80px 40px;
             }
-            
+
             .premium-heading {
                 font-size: 36px;
             }
-            
+
             .premium-list {
                 font-size: 1.1rem;
                 padding: 0 20px;
             }
-            
+
             /* Manga Content */
             .manga {
                 width: 45%;
                 max-width: 450px;
             }
-            
+
             .description {
                 font-size: 1.1rem;
                 padding: 0 40px;
             }
         }
-        
+
         @media (min-width: 1024px) {
             #welcome {
                 padding: 100px 60px;
             }
-            
+
             #welcome h1 {
                 font-size: 3rem;
             }
-            
+
             .premium-section {
                 padding: 100px 60px;
             }
-            
+
             .manga {
                 width: 40%;
             }
@@ -290,10 +290,12 @@
             <li><a href="" class="activenav">Products</a></li>
             <li><a href="order.html">Order</a></li>
             <li><a href="https://www.facebook.com/share/12LCAYsnfsL/">FB Page</a></li>
+            <li><a href="quality.html">Quality</a></li>
             <li><a href="review.html">Reviews</a></li>
+            
         </ol>
     </div>
-    
+
     <div>
         <p id="pagename">
             <img src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/IMG_20250507_085248_977.jpg" alt="Emperor's Manga Logo">
@@ -304,7 +306,7 @@
             <p>Find your favorite stories, epic battles, and heart-melting moments—all in one place. Let's dive into a world of ink and imagination!</p>
         </div>
     </div>
-    
+
     <section class="premium-section">
         <div class="premium-container">
             <h2 class="premium-heading">
@@ -333,7 +335,7 @@
             <br><br>
             How thrilling, huh? Now get each volume on our page. Buy now!
         </p>
-        
+
         <img class="manga" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Images/FB_IMG_1746586725350.jpg" alt="Sakomoto Days">
         <a href="https://www.facebook.com/61566811864616/posts/pfbid02DeaKj2bBH4FUyZEcZAUjtwE4w31cWrFeuXgewjRj2KLLaByb5rPcQjjbxSYejEtal/?app=fbl">
             <p class="name">Sakomoto Days (Vol. 1 - 12)</p>
@@ -348,10 +350,10 @@
     <script>
         let lastScroll = 0;
         const nav = document.getElementById('nav');
-        
+
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-            
+
             if (currentScroll > lastScroll && currentScroll > 100) {
                 // Scrolling down and past 100px
                 nav.style.transform = 'translateY(-100%)';
@@ -359,7 +361,7 @@
                 // Scrolling up
                 nav.style.transform = 'translateY(0)';
             }
-            
+
             lastScroll = currentScroll;
         });
     </script>
