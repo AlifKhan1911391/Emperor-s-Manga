@@ -10,7 +10,7 @@
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -19,15 +19,18 @@
             flex-direction: column;
             min-height: 100vh;
             background-color: #f5f5f5;
+            align-items: center; /* This will center all direct children of body */
         }
-        
+
         .review-container {
             display: flex;
             justify-content: center;
+            align-items: center; /* Add this to center vertically */
             flex-direction: column;
             margin: 20px 0;
+            width: 100%; /* Ensure it takes full width */
         }
-        
+
         .review {
             width: 60%;
             height: auto;
@@ -36,11 +39,11 @@
             margin: 15px 0;
             transition: transform 0.3s ease;
         }
-        
+
         .review:hover {
             transform: scale(1.02);
-        }	
-    
+        }        
+
         #nav {
             position: fixed;
             top: 0;
@@ -50,18 +53,18 @@
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
-        
+
         #nav ol {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
-        
+
         #nav li {
             float: left;
         }
-        
+
         #nav li a {
             display: block;
             color: white;
@@ -70,20 +73,20 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
-        
+
         #nav li a:hover {
             background-color: #111;
         }
-        
+
         .activenav {
             background-color: #4169E1;
             color: white;
         }
-        
+
         .activenav:hover {
             background-color: #00008B;
         }
-        
+
         .reviews-heading {
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -91,7 +94,7 @@
             position: relative;
             color: #333;
         }
-        
+
         .reviews-heading h1 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -105,7 +108,7 @@
             display: inline-block;
             padding: 0 20px;
         }
-        
+
         .reviews-heading::before,
         .reviews-heading::after {
             content: "";
@@ -117,15 +120,15 @@
             top: 50%;
             transform: translateY(-50%);
         }
-        
+
         .reviews-heading::before {
             left: 10%;
         }
-        
+
         .reviews-heading::after {
             right: 10%;
         }
-        
+
         .reviews-heading p {
             font-size: 1.2rem;
             color: #666;
@@ -136,7 +139,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .reviews-heading p::after {
             content: "";
             position: absolute;
@@ -147,17 +150,17 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
         @media (max-width: 768px) {
             .reviews-heading h1 {
                 font-size: 2rem;
             }
-            
+
             .reviews-heading::before,
             .reviews-heading::after {
                 width: 30px;
             }
-            
+
             .review {
                 width: 90%;
             }
@@ -173,38 +176,38 @@
             <li><a href="" class="activenav">Reviews</a></li>
         </ol>
     </div>
-    
+
     <div class="reviews-heading">
         <h1>Customer Reviews</h1>
         <p>See what our customers are saying about us</p>
     </div>   
-    
+
     <div class="review-container">
         <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195714.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195717.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195720.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195723.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195726.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195729.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195735.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195737.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195740.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195743.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195753.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195757.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195809.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195811.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195815.jpg" title="Review" alt="Image loading failed">
-<img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195818.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195717.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195720.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195723.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195726.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195729.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195735.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195737.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195740.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195743.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195753.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195757.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195809.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195811.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195815.jpg" title="Review" alt="Image loading failed">
+        <img class="review" src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/Reviews/Screenshot_20250508-195818.jpg" title="Review" alt="Image loading failed">
     </div>
-    
+
     <script>
         let lastScroll = 0;
         const nav = document.getElementById('nav');
-        
+
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-            
+
             if (currentScroll > lastScroll && currentScroll > 100) {
                 // Scrolling down and past 100px
                 nav.style.transform = 'translateY(-100%)';
@@ -212,7 +215,7 @@
                 // Scrolling up
                 nav.style.transform = 'translateY(0)';
             }
-            
+
             lastScroll = currentScroll;
         });
     </script> 
