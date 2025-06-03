@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emperor's Manga</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/IMG_20250507_085248_977.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            align-items: center; /* This will center all direct children of body */
+        }
+
+        .quality-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Add this to center vertically */
+            flex-direction: column;
+            margin: 20px 0;
+            width: 100%; /* Ensure it takes full width */
+        }
+
+        .quality {
+            width: 60%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .quality:hover {
+            transform: scale(1.02);
+        }        
+
+        #nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            transform: translateY(0);
+        }
+
+        #nav ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #nav li {
+            float: left;
+        }
+
+        #nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 13px 11px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        #nav li a:hover {
+            background-color: #111;
+        }
+
+        .activenav {
+            background-color: #4169E1;
+            color: white;
+        }
+
+        .activenav:hover {
+            background-color: #00008B;
+        }
+
+        .qualitys-heading {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 80px 0 30px 0;
+            position: relative;
+            color: #333;
+        }
+
+        .qualitys-heading h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .qualitys-heading::before,
+        .qualitys-heading::after {
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .qualitys-heading::before {
+            left: 10%;
+        }
+
+        .qualitys-heading::after {
+            right: 10%;
+        }
+
+        .qualitys-heading p {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 500;
+            margin-top: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .qualitys-heading p::after {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .qualitys-heading h1 {
+                font-size: 2rem;
+            }
+
+            .qualitys-heading::before,
+            .qualitys-heading::after {
+                width: 30px;
+            }
+
+            .quality {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ol>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="https://www.facebook.com/share/12LCAYsnfsL/">FB Page</a></li>
+            <li><a href="" class="activenav">Quality</a></li>
+                        <li><a href="review.html">Reviews</a></li>
+        </ol>
+    </div>
+
+    <div class="qualitys-heading">
+        <h1>Manga qualitys</h1>
+        <p>See raw pics of our products</p>
+    </div>   
+
+    <div class="quality-container">
+<img src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/quality/IMG_20250604_002646_575.jpg" class="quality" title="quality" alt="image loading failed">
+<img src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/quality/IMG_20250604_002641_715.jpg" class="quality" title="quality" alt="image loading failed">
+<img src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/quality/IMG_20250604_002643_359.jpg" class="quality" title="quality" alt="image loading failed">
+<img src="https://raw.githubusercontent.com/AlifKhan1911391/Emperor-s-Manga/refs/heads/main/quality/IMG_20250604_002648_056.jpg" class="quality" title="quality" alt="image loading failed">
+    </div>
+
+    <script>
+        let lastScroll = 0;
+        const nav = document.getElementById('nav');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down and past 100px
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                nav.style.transform = 'translateY(0)';
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script> 
+</body>
+</html>
