@@ -179,12 +179,14 @@
         .manga:hover {
             transform: scale(1.02);
         }
+
 .heading-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 20px 0;
+  background-color: transparent; /* Ensure no background conflicts */
 }
 
 .shop-now {
@@ -199,7 +201,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  margin: 0; /* Remove default h1 margin */
+  margin: 0 auto; /* Changed to auto for horizontal centering */
+  display: inline-block; /* Changed to inline-block for proper width */
 }
         .name {
             margin-bottom: 5px;
